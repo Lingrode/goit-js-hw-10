@@ -37,7 +37,7 @@ function handleSubmit(event) {
         messageDefaultSettings,
         title: 'OK',
         message: `${value}`,
-        iconUrl: '/goit-js-hw-10/src/img/icon-ok.svg',
+        iconUrl: './src/img/icon-ok.svg',
         backgroundColor: 'rgb(89, 161, 13)',
       });
     })
@@ -46,7 +46,7 @@ function handleSubmit(event) {
         messageDefaultSettings,
         title: 'Error',
         message: `${value}`,
-        iconUrl: '/goit-js-hw-10/src/img/icon-error.svg',
+        iconUrl: './src/img/icon-error.svg',
         backgroundColor: 'rgb(239, 64, 64)',
       });
     });
