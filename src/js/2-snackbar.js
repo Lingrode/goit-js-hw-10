@@ -25,29 +25,29 @@ function handleSubmit(event) {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (selectedValue === 'fulfilled') {
-        resolve(`Fulfilled promise in ${delay}ms`);
+        resolve(delay);
       }
       if (selectedValue === 'rejected') {
-        reject(`Rejected promise in ${delay}ms`);
+        reject(delay);
       }
     }, delay);
   });
 
   promise
-    .then(value => {
+    .then(delay => {
       iziToast.success({
         messageDefaultSettings,
         title: 'OK',
-        message: `${value}`,
+        message: `Fulfilled promise in ${delay}ms`,
         iconUrl: `${iconOk}`,
         backgroundColor: 'rgb(89, 161, 13)',
       });
     })
-    .catch(value => {
+    .catch(delay => {
       iziToast.error({
         messageDefaultSettings,
         title: 'Error',
-        message: `${value}`,
+        message: `Rejected promise in ${delay}ms`,
         iconUrl: `${iconError}`,
         backgroundColor: 'rgb(239, 64, 64)',
       });
